@@ -8,81 +8,76 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
 
+struct ContentView: View{
+    
+  //  @State private var label = "label"
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
+        VStack(alignment: .leading) {
+            Text("sheCooks")
+                .font(
+                    .custom(
+                        "AmericanTypewriter",
+                        fixedSize: 50)
+                    .weight(.heavy)
+                )
+                .position(x: 200, y: 300)
+            HStack {
+                Text("Choose the ingredients available to you & we’ll give you a recipe!")
+                    .font(
+                        .custom(
+                            "AmericanTypewriter",
+                            size: 15)
+                        
+                    )
+                    .frame(width: 250, height: 56)
+                    .position(x: 200, y: 0)
+                
+                Button{
+                    //action for the buttom
+                } label: {
+                    Text("Tap to begin")
+                        .padding()
+                        .background(Color.green)
+                        .font(
+                            .custom(
+                                "AmericanTypewriter",
+                                size: 35)
+                        )
+                        .foregroundColor(Color.black)
+                        .frame(width: 1000)
+                        .position(x: 125, y: 35)
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+                .buttonStyle(.plain)
+                
+                .frame(width: 250, height: 80)
+                .position(x: 0, y: 100)
+                
                 }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
         }
+
+        
+        
+        
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
+//let color = UIColor(red: 0.498, green: 0.718, blue: 0.494, alpha: 1)
+//    extension UIColor {
+//        var rgba: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+//            var red: CGFloat = 0
+//            var green: CGFloat = 0
+//            var blue: CGFloat = 0
+//            var alpha: CGFloat = 0
+//            getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+//
+//            return (red, green, blue, alpha)
+//        }
+    
 }
