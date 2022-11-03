@@ -16,6 +16,11 @@
 		13AFAF1B29007F85007D4619 /* sheCooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AFAF1A29007F85007D4619 /* sheCooksTests.swift */; };
 		13AFAF2529007F85007D4619 /* sheCooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AFAF2429007F85007D4619 /* sheCooksUITests.swift */; };
 		13AFAF2729007F85007D4619 /* sheCooksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AFAF2629007F85007D4619 /* sheCooksUITestsLaunchTests.swift */; };
+		13C7C5FD291332E300A54C33 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13C7C5FC291332E300A54C33 /* SplashScreen.storyboard */; };
+		13C7C5FF2913342400A54C33 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7C5FE2913342400A54C33 /* RecipeListView.swift */; };
+		13C7C6012913346600A54C33 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7C6002913346600A54C33 /* RecipeView.swift */; };
+		13C7C60C2913370F00A54C33 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7C60B2913370F00A54C33 /* APICaller.swift */; };
+		13C7C60F291338D500A54C33 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7C60E291338D500A54C33 /* Search.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		13AFAF2029007F85007D4619 /* sheCooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sheCooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13AFAF2429007F85007D4619 /* sheCooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sheCooksUITests.swift; sourceTree = "<group>"; };
 		13AFAF2629007F85007D4619 /* sheCooksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sheCooksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13C7C5FC291332E300A54C33 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		13C7C5FE2913342400A54C33 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
+		13C7C6002913346600A54C33 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		13C7C60B2913370F00A54C33 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		13C7C60E291338D500A54C33 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +109,10 @@
 		13AFAF0229007F81007D4619 /* sheCooks */ = {
 			isa = PBXGroup;
 			children = (
+				13C7C60D2913374200A54C33 /* General */,
+				13C7C609291335E800A54C33 /* Views */,
+				13C7C608291335D100A54C33 /* Manager */,
 				13AFAF0329007F81007D4619 /* sheCooksApp.swift */,
-				13AFAF0529007F81007D4619 /* ContentView.swift */,
 				13AFAF0729007F84007D4619 /* Assets.xcassets */,
 				13AFAF0C29007F84007D4619 /* Persistence.swift */,
 				13AFAF1129007F84007D4619 /* Info.plist */,
@@ -114,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				13AFAF0A29007F84007D4619 /* Preview Assets.xcassets */,
+				13C7C5FC291332E300A54C33 /* SplashScreen.storyboard */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -133,6 +146,32 @@
 				13AFAF2629007F85007D4619 /* sheCooksUITestsLaunchTests.swift */,
 			);
 			path = sheCooksUITests;
+			sourceTree = "<group>";
+		};
+		13C7C608291335D100A54C33 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				13C7C60B2913370F00A54C33 /* APICaller.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		13C7C609291335E800A54C33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13AFAF0529007F81007D4619 /* ContentView.swift */,
+				13C7C5FE2913342400A54C33 /* RecipeListView.swift */,
+				13C7C6002913346600A54C33 /* RecipeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		13C7C60D2913374200A54C33 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				13C7C60E291338D500A54C33 /* Search.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13AFAF0B29007F84007D4619 /* Preview Assets.xcassets in Resources */,
+				13C7C5FD291332E300A54C33 /* SplashScreen.storyboard in Resources */,
 				13AFAF0829007F84007D4619 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,8 +305,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13C7C6012913346600A54C33 /* RecipeView.swift in Sources */,
 				13AFAF1029007F84007D4619 /* sheCooks.xcdatamodeld in Sources */,
 				13AFAF0D29007F84007D4619 /* Persistence.swift in Sources */,
+				13C7C60C2913370F00A54C33 /* APICaller.swift in Sources */,
+				13C7C5FF2913342400A54C33 /* RecipeListView.swift in Sources */,
+				13C7C60F291338D500A54C33 /* Search.swift in Sources */,
 				13AFAF0629007F81007D4619 /* ContentView.swift in Sources */,
 				13AFAF0429007F81007D4619 /* sheCooksApp.swift in Sources */,
 			);
@@ -433,6 +477,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -462,6 +507,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
