@@ -24,11 +24,12 @@ struct RecipeListView: View {
             // 1st recipe
             VStack{
                 Image("BakedZuc")
+                .resizable()
                 .frame(width: 327, height: 103)
                 .clipShape(RoundedRectangle(cornerRadius: 5.0, style: .circular))
                 .offset(x: 0,y: 15)
             
-                Text("1st Recipe")
+                Text("Baked Zucchini")
                     .position(x:185, y: 25)
             }
             
@@ -40,12 +41,13 @@ struct RecipeListView: View {
             
             // 2nd recipe
             VStack{
-                Image("BakedZuc")
+                Image("AppleCrumble")
+                    .resizable()
                     .frame(width: 327, height: 103)
                     .clipShape(RoundedRectangle(cornerRadius: 5.0, style: .circular))
                     .offset(x: 0,y: 15)
                 
-                Text("2nd Recipe")
+                Text("Apple Crumble")
                     .position(x: 185, y: 25)
             }
             .background(Color(red: 0.835, green: 0.835, blue: 0.835))
@@ -55,12 +57,13 @@ struct RecipeListView: View {
             
             // 3rd recipe
             VStack{
-                Image("BakedZuc")
+                Image("Char")
+                    .resizable()
                     .frame(width: 327, height: 103)
                     .clipShape(RoundedRectangle(cornerRadius: 5.0, style: .circular))
                     .offset(x: 0,y: 15)
                 
-                Text("3rd Recipe")
+                Text("Char-Grilled Beef Tenderloin")
                     .position(x: 185, y: 25)
             }
             
@@ -72,7 +75,8 @@ struct RecipeListView: View {
             // 4th recipe
             
             VStack{
-                Image("BakedZuc")
+                Image("Pizza")
+                    .resizable()
                     .frame(width: 327, height: 103)
                     .clipShape(RoundedRectangle(cornerRadius: 5.0, style: .circular))
                     .offset(x: 0,y: 15)
